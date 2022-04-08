@@ -1,6 +1,7 @@
 provider "aws" {
   region = "eu-central-1"
 }
+
 resource "aws_security_group" "ssh_traffic" {
   name        = "ssh_traffic"
   description = "Allow SSH inbound traffic"
@@ -38,7 +39,6 @@ resource "aws_instance" "web_server_instance" {
     yor_trace            = "b4be3b4b-ec4b-4c08-82d0-2be0d5602c23"
   }
 }
-
 
 data "aws_ami" "ubuntu" {
   most_recent = true
