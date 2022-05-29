@@ -1,3 +1,5 @@
+# TEST LINE
+
 resource "google_compute_network" "vpc" {
   name                    = "terragoat-${var.environment}-network"
   description             = "Virtual vulnerable-by-design network"
