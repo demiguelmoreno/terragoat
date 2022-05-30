@@ -5,7 +5,7 @@ resource "aws_s3_bucket" "data" {
   # bucket does not have versioning
   # TEST LINE
   bucket        = "${local.resource_prefix.value}-data"
-  acl           = "public-read"
+  acl           = "private"
   force_destroy = true
   tags = merge({
     Name        = "${local.resource_prefix.value}-data"
