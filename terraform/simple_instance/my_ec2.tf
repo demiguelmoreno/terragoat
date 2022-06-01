@@ -12,32 +12,12 @@ resource "aws_security_group" "ssh_traffic" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  tags = {
-    git_commit           = "09fba16102dc0944873c973a02ed24f2d98b2d8a"
-    git_file             = "terraform/simple_instance/my_ec2.tf"
-    git_last_modified_at = "2022-06-01 16:04:08"
-    git_last_modified_by = "mdemiguelmor@paloaltonetworks.com"
-    git_modifiers        = "manuel.demiguelmoreno/mdemiguelmor"
-    git_org              = "demiguelmoreno"
-    git_repo             = "terragoat"
-    yor_trace            = "2221d99e-680b-4cc1-8af6-c305ce607eb4"
-  }
 }
 
 resource "aws_instance" "web_server_instance" {
   ami             = data.aws_ami.ubuntu.id
   instance_type   = "t2.micro"
   security_groups = ["${aws_security_group.ssh_traffic.name}"]
-  tags = {
-    git_commit           = "09fba16102dc0944873c973a02ed24f2d98b2d8a"
-    git_file             = "terraform/simple_instance/my_ec2.tf"
-    git_last_modified_at = "2022-06-01 16:04:08"
-    git_last_modified_by = "mdemiguelmor@paloaltonetworks.com"
-    git_modifiers        = "manuel.demiguelmoreno/mdemiguelmor"
-    git_org              = "demiguelmoreno"
-    git_repo             = "terragoat"
-    yor_trace            = "3ccd636f-c2a5-4bb1-a29c-f8c6417b9343"
-  }
 }
 
 data "aws_ami" "ubuntu" {
