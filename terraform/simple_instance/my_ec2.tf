@@ -1,3 +1,5 @@
+# Simple instance template
+
 provider "aws" {
   region = "eu-central-1"
 }
