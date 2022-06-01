@@ -20,6 +20,7 @@ resource "aws_security_group" "ssh_traffic" {
     git_modifiers        = "manuel.demiguelmoreno/mdemiguelmor"
     git_org              = "demiguelmoreno"
     git_repo             = "terragoat"
+    yor_trace            = "2221d99e-680b-4cc1-8af6-c305ce607eb4"
   }
 }
 
@@ -35,6 +36,7 @@ resource "aws_instance" "web_server_instance" {
     git_modifiers        = "manuel.demiguelmoreno/mdemiguelmor"
     git_org              = "demiguelmoreno"
     git_repo             = "terragoat"
+    yor_trace            = "3ccd636f-c2a5-4bb1-a29c-f8c6417b9343"
   }
 }
 
