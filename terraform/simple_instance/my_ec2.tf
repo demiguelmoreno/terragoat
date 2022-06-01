@@ -2,7 +2,7 @@ provider "aws" {
   region = "eu-central-1"
 }
 
-resource "aws_security_group" "ssh_traffic" {
+resource "aws_security_group" "mdemiguelmor-ssh_traffic" {
   name        = "ssh_traffic"
   description = "Allow SSH inbound traffic"
   ingress {
@@ -24,7 +24,7 @@ resource "aws_security_group" "ssh_traffic" {
   }
 }
 
-resource "aws_instance" "web_server_instance" {
+resource "aws_instance" "mdemiguelmor-web_server_instance" {
   ami             = data.aws_ami.ubuntu.id
   instance_type   = "t2.micro"
   security_groups = ["${aws_security_group.ssh_traffic.name}"]
