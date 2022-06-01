@@ -13,9 +13,9 @@ resource "aws_security_group" "mdemiguelmor-ssh_traffic" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
-    git_commit           = "99bab633e6aa66389b48195174ac3ef19162aefc"
+    git_commit           = "f227e6136f0f46ae49e2dc13161073b12b4574eb"
     git_file             = "terraform/simple_instance/my_ec2.tf"
-    git_last_modified_at = "2022-04-26 10:36:56"
+    git_last_modified_at = "2022-06-01 15:47:19"
     git_last_modified_by = "manuel.demiguelmoreno@gmail.com"
     git_modifiers        = "manuel.demiguelmoreno"
     git_org              = "demiguelmoreno"
@@ -29,9 +29,9 @@ resource "aws_instance" "mdemiguelmor-web_server_instance" {
   instance_type   = "t2.micro"
   security_groups = ["${aws_security_group.ssh_traffic.name}"]
   tags = {
-    git_commit           = "99bab633e6aa66389b48195174ac3ef19162aefc"
+    git_commit           = "f227e6136f0f46ae49e2dc13161073b12b4574eb"
     git_file             = "terraform/simple_instance/my_ec2.tf"
-    git_last_modified_at = "2022-04-26 10:36:56"
+    git_last_modified_at = "2022-06-01 15:47:19"
     git_last_modified_by = "manuel.demiguelmoreno@gmail.com"
     git_modifiers        = "manuel.demiguelmoreno"
     git_org              = "demiguelmoreno"
