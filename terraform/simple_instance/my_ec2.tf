@@ -20,14 +20,12 @@ resource "aws_security_group" "ssh_traffic" {
     git_modifiers        = "manuel.demiguelmoreno/mdemiguelmor"
     git_org              = "demiguelmoreno"
     git_repo             = "terragoat"
-    yor_trace            = "4b06981b-c7c8-44d6-8b2e-40424ded839e"
   }
 }
 
 resource "aws_instance" "web_server_instance" {
   ami             = data.aws_ami.ubuntu.id
   instance_type   = "t2.micro"
-  name            = "mdemiguelmor-web_server_instance"
   security_groups = ["${aws_security_group.ssh_traffic.name}"]
   tags = {
     git_commit           = "09fba16102dc0944873c973a02ed24f2d98b2d8a"
@@ -37,7 +35,6 @@ resource "aws_instance" "web_server_instance" {
     git_modifiers        = "manuel.demiguelmoreno/mdemiguelmor"
     git_org              = "demiguelmoreno"
     git_repo             = "terragoat"
-    yor_trace            = "ff0a0bcd-310b-44bb-a7fa-ebc727bd626c"
   }
 }
 
