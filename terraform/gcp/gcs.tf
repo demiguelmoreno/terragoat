@@ -1,4 +1,5 @@
 resource "google_storage_bucket" "terragoat_website" {
+  uniform_bucket_level_access = true
   # TEST LINE
   name          = "terragot-${var.environment}"
   location      = var.location
