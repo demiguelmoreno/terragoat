@@ -1,4 +1,5 @@
 resource "google_storage_bucket" "terragoat_website" {
+  # TEST LINE
   name          = "terragot-${var.environment}"
   location      = var.location
   force_destroy = true
