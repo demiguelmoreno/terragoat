@@ -91,6 +91,7 @@ resource "azurerm_mssql_server" "mssql4" {
     git_repo             = "terragoat"
     yor_trace            = "c3b85724-4f7e-4c63-a17d-3d04239beae8"
   }
+  public_network_access_enabled = false
 }
 
 resource "azurerm_mssql_server" "mssql5" {
