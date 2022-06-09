@@ -4,6 +4,7 @@ data "google_compute_zones" "available_zones" {
 }
 
 resource "google_container_cluster" "workload_cluster" {
+  # Comentario
   name               = "terragoat-${var.environment}-cluster"
   logging_service    = "none"
   location           = var.region
@@ -19,6 +20,7 @@ resource "google_container_cluster" "workload_cluster" {
       cidr_block = "0.0.0.0/0"
     }
   }
+  enable_binary_authorization = true
 }
 
 resource "google_container_node_pool" "custom_node_pool" {
